@@ -23,7 +23,7 @@ jobs:
       - name: Verificar formato con Black
         run: |
           source venv/bin/activate
-          black --check .
+          black --check src tests
 
       - name: Verificar importaciones con isort
         run: |
