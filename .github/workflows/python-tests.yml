@@ -1,4 +1,4 @@
-name: Ejecutar pruebas de Python
+name: Análisis y pruebas de código en Python
 
 on: [push, pull_request]
 
@@ -20,7 +20,22 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
+      - name: Verificar formato con Black
+        run: |
+          source venv/bin/activate
+          black --check .
+
+      - name: Verificar importaciones con isort
+        run: |
+          source venv/bin/activate
+          isort . --check-only
+
+      - name: Verificar errores de estilo con Flake8
+        run: |
+          source venv/bin/activate
+          flake8 .
+
       - name: Ejecutar pruebas
         run: |
           source venv/bin/activate
-          pytest
+          pytest tests/
