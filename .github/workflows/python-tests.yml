@@ -16,7 +16,8 @@ jobs:
 
       - name: Actualizar pip y setuptools
         run: |
-          python -m pip install --upgrade pip setuptools
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade setuptools
 
       - name: Instalar dependencias
         run: |
