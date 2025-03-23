@@ -57,5 +57,11 @@ jobs:
           name: pytest-report
           path: report.xml
 
+      - name: Verificar vulnerabilidades en dependencias
+        run: |
+          source venv/bin/activate
+          pip-audit
+
+
 
 
