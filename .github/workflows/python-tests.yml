@@ -38,4 +38,5 @@ jobs:
       - name: Ejecutar pruebas
         run: |
           source venv/bin/activate
+          PYTHONPATH=src pytest tests/
           pytest tests/
