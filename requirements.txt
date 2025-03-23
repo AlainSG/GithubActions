@@ -35,6 +35,7 @@ pytest==8.3.5
 pytest-cov==6.0.0
 requests==2.32.3
 rich==13.9.4
+setuptools==77.0.3
 sortedcontainers==2.4.0
 toml==0.10.2
 urllib3==2.3.0
